@@ -21,7 +21,10 @@ function calculate(operand1, operand2, operator) {
     }
 }
 
-
+// console.log(calculator("+ 3 4"));
+console.log(calculator("- 3 * 4 5"));
+// console.log(calculator("* + 3 4 5")); // 5 4 3 + *
+// console.log(calculator("/ - 3 4 + 5 2")); // 2 5 + 4 3 - /
 function calculator(expression) {
     const tokens = expression.split(" ");
     console.log("splitted expr: ", tokens);
