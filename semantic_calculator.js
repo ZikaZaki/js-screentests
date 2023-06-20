@@ -84,3 +84,7 @@ function calculator (expr) {
 
   return resultStack.pop();
 }
+
+const result = calculator('4 *5  + 3 / 2');
+console.log(result); // Output: 13.5
+
