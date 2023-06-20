@@ -17,3 +17,9 @@ function calculate(operand1, operand2, operator) {
 function isOperator(opr) {
   return opr === "+" || opr === "-" || opr === "*" || opr === "/" || opr === "%";
 }
+
+function isDigit(str) {
+  /* Check if the string contains only digits (and optionally, a minus sign at the start)
+  */
+  return /^-?\d+$/.test(str);
+}
