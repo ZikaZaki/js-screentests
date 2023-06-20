@@ -14,3 +14,7 @@ function isDigit(char) {
 function isOperator(opr) {
   return opr === "+" || opr === "-" || opr === "*" || opr === "/" || opr === "%";
 }
+
+function hasPrecedence(opr) {
+  return opr === "*" || opr === "/" || opr === "%";
+}
