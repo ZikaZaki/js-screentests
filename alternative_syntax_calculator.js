@@ -13,3 +13,7 @@ function calculate(operand1, operand2, operator) {
       return parseFloat(operand1) % parseFloat(operand2);
   }
 }
+
+function isOperator(opr) {
+  return opr === "+" || opr === "-" || opr === "*" || opr === "/" || opr === "%";
+}
