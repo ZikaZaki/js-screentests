@@ -18,3 +18,18 @@ function isOperator(opr) {
 function hasPrecedence(opr) {
   return opr === "*" || opr === "/" || opr === "%";
 }
+
+function calculate(operand1, operand2, operator) {
+  switch (operator) {
+    case "+":
+      return operand1 + operand2;
+    case "-":
+      return operand1 - operand2;
+    case "*":
+      return operand1 * operand2;
+    case "/":
+      return operand1 / operand2;
+    case "%":
+      return operand1 % operand2;
+  }
+}
