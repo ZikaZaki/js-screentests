@@ -33,8 +33,8 @@ function calculate(operand1, operand2, operator) {
       return operand1 % operand2;
   }
 }
-
 // =============================================================================
+
 function calculator (expr) {
   // remove white spaces from expression
   const expression = expr.replace(/\s/g, "");
@@ -87,4 +87,3 @@ function calculator (expr) {
 
 const result = calculator('4 *5  + 3 / 2');
 console.log(result); // Output: 13.5
-
