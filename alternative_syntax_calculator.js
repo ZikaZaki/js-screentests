@@ -23,7 +23,7 @@ function isDigit(str) {
   */
   return /^-?\d+$/.test(str);
 }
-/* ******************************************************************************************************************** */
+
 function altCalculator(expression) {
   const tokens = expression.split(" ");
   let operand1, operand2, operator, result;
@@ -56,7 +56,8 @@ function altCalculator(expression) {
   return tokens.pop();
 }
 
+
 console.log(altCalculator("+ 3 4")); // 3 + 4 => 7
-console.log(altCalculator("- 3 * 4 5")); // 3 - (4 * 5) => -17
+console.log(altCalculator("- 3 * 4 5"));   // 3 - (4 * 5) => -17
 console.log(altCalculator("* + 3 4 5")); // (3 + 4) * 5 => 35
 console.log(altCalculator("/ - 3 4 + 5 2")); //(3-4) / (5+2) => -0.142
