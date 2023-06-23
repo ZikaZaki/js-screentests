@@ -50,6 +50,7 @@ function findIndexes(str, pattern) {
 function altCalc(expression) {
   let expr = expression;
   const regex = /[-+*%\/]\s{1}\-?\d+\s{1}\-?\d+/;
+  // const regex = /[-+*%\/]\s\-?\d+\s\-?\d+/; // with any number of spaces
 
   while (regex.exec(expr)) {
     const match = regex.exec(expr);
