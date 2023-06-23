@@ -1,3 +1,5 @@
+// '^[-+*%\/]?\d+$' matches any digits that are optionally preceded with any operator signs (+-*%\/).
+// '^[-+*%\/]?\d{2,}+$' matches at least 2 digits or more that are optionally preceded with any operator signs (+-*%\/).
 // Helper functions
 function calculate(operand1, operand2, operator) {
   switch (operator) {
