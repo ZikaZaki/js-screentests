@@ -1,7 +1,17 @@
-// '^[-+*%\/]?\d+$' matches any digits that are optionally preceded with any operator signs (+-*%\/).
-// '^[-+*%\/]?\d{2,}+$' matches at least 2 digits or more that are optionally preceded with any operator signs (+-*%\/).
-// '[-+*%\/]{1}+\d{2,}+$' matches at least 2 digits or more that must be preceded with at least 
-//  one of any operator signs (+-*%\/), starting from '$' end of line.
+/* ***********************************************************REGEX*************************************************************** 
+'^[-+*%\/]?\d+$' matches any digits that are optionally preceded with any operator signs (+-*%\/).
+'^[-+*%\/]?\d{2,}+$' matches at least 2 digits or more that are optionally preceded with any operator signs (+-*%\/).
+'[-+*%\/]{1}+\d{2,}+$' matches at least 2 digits or more that must be preceded with at least 
+ one of any operator signs (+-*%\/), starting from '$' end of line.
+'[-+*%\/]{1}+\d{2,}' matches at least 2 digits or more that must be preceded with at least 
+ one of any operator signs (+-*%\/), starting from the beggining of line.
+ '\d{1}+[-+*%\/]{1}+\d{1}+$' Matches one digit followed by one of operator signs (+-*%\/), followed by another one digit.
+  Starts from the end of the line.
+ '\d{1}+[-+*%\/]{1}+\d{1}' Matches one digit followed by one of operator signs (+-*%\/), followed by another one digit.
+  Starts from the begginig of the line.
+  '[^-+*%\/\d]+$' matches any character other than digits [0-9] or operator signs (+-*%\/). Used to validate the expression.
+***********************************************************************************************************************************/
+
 // Helper functions
 function calculate(operand1, operand2, operator) {
   switch (operator) {
