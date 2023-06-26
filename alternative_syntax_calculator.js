@@ -24,6 +24,7 @@ function isDigit(str) {
   return /^-?\d+$/.test(str);
 }
 
+// Alternative Calculator Function
 function altCalculator(expression) {
   const tokens = expression.split(" ");
   let operand1, operand2, operator, result;
