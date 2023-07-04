@@ -29,7 +29,8 @@ function calculate(operand1, operand2, operator) {
 }
 
 function isOperator(opr) {
-  return opr === "+" || opr === "-" || opr === "*" || opr === "/" || opr === "%";
+  /* Check if a char is an operator (+,-,*,/,%) */
+  return /^[+\-*\/%]$/.test(opr);
 }
 
 function isDigit(str) {
