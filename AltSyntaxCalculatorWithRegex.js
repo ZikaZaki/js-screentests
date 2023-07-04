@@ -59,17 +59,21 @@ function findIndexes(str, pattern) {
     return [-1, -1];
   }
 }
+
 // =====================================================
-function altCalc(expression) {
-  let expr = expression;
-  const regex = /[-+*%\/]\s{1}\-?\d+\s{1}\-?\d+/;
-  // const regex = /[-+*%\/]\s\-?\d+\s\-?\d+/; // with any number of spaces
+function altCalc(expr) {
+  const regex = /[-+*%\/]\s+\-?\d+\s+\-?\d+/;
 
   while (regex.exec(expr)) {
+    // Get the match from the expression
     const match = regex.exec(expr);
-    const tokens = match[0].split(" ");
+    // Get the match start and end index
     const [startIdx, endIdx] = [match.index, match.index + match[0].length - 1];
+    // Extract only digits and operators from the match
+    const tokens = match[0].split(" ").filter(t => isDigit(t) || isOperator(t));
+    // Perform calculation
     const result = calculate(Number(tokens[1]), Number(tokens[2]), tokens[0]);
+    // Replace the match string with the result
     expr = expr.slice(0, startIdx) + result + expr.slice(endIdx + 1);
   }
 
@@ -77,6 +81,7 @@ function altCalc(expression) {
 }
 
 console.log(altCalc("+ 3 4")); // 3 + 4 => 7
-console.log(altCalc("- 3 * 4 5"));   // 3 - (4 * 5) => -17
+console.log(altCalc("- 3 * 4  5"));   // 3 - (4 * 5) => -17
+console.log("- 3 * 4  5".split(" "));
 console.log(altCalc("* + 3 4 5")); // (3 + 4) * 5 => 35
 console.log(altCalc("/ - 3 4 + 5 2")); //(3-4) / (5+2) => -0.142
