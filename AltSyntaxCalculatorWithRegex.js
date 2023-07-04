@@ -39,13 +39,10 @@ function isDigit(str) {
   return /^-?\d+$/.test(str);
 }
 
+
 function isAltSyntax(str) {
-  /* Check if the string starts with one operator sign
-  and followed by at least two digits
-  */
-  // return /^[-+*%\/] \d \d+$/.test(str);
-  return /[-+*%\/]\s{1}\d+\s{1}\d+/.test(str);
-  // return /[-+*%\/]\s{1}\-?\d+\s{1}\-?\d+/.test(str);
+  /* Check if there's an alterantive syntax match in the string */
+  return /[-+*%\/]\s+\-?\d+\s+\-?\d+/.test(str);
 }
 
 function isSemanticSyntax(str) {
