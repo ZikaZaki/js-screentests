@@ -46,6 +46,7 @@ function isAltSyntax(str) {
 }
 
 function isSemanticSyntax(str) {
+  /* Check if there's a semantic syntax match in the string */
   return /^\d+[-+*%\/]{1}\d+$/.test(str);
 }
 
