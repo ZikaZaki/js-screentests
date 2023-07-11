@@ -1,40 +1,40 @@
-
 An example of a CodeSignal 70-minute coding test that evaluates core CS concepts and measures code implementation, problem-solving, and speed:
 
 ## Problem Statement:
 
-You are given two strings `s` and `t`. Write a function `isAnagram` that returns `true` if `t` is an anagram of `s` and `false` otherwise.
+You are given a list of integers `nums` and an integer `target`. Write a function `twoSum` that returns all pairs of indices `[i, j]` such that `nums[i] + nums[j] = target`. You may assume that each input would have exactly one solution, and you may not use the same element twice.
 
-Implement function `isAnagram(s: str, t: str) -> bool` where
-- s: A string of lowercase letters
-- t: A string of lowercase letters
+Implement function `twoSum(nums: List[int], target: int) -> List[List[int]]` where
+- nums: A list of integers
+- target: An integer
 
 ### Example
 
 Input:
 ```
-s = "anagram"
-t = "nagaram"
+nums = [2, 7, 11, 15]
+target = 9
 ```
 
 Output:
 ```
-true
+[[0, 1]]
 ```
 
 Explanation:
 ```
-The two strings contain the same letters, so `t` is an anagram of `s`.
+nums[0] + nums[1] = 2 + 7 = 9, so [0, 1] is a valid solution.
 ```
 
 ### Constraints
 
-- The length of the strings `s` and `t` will be between 1 and 5*10^4.
-- The strings `s` and `t` will only contain lowercase letters.
+- The length of the list `nums` will be between 2 and 10^4.
+- Each integer `nums[i]` will be between -10^9 and 10^9, inclusive.
+- The integer `target` will be between -10^9 and 10^9, inclusive.
 
 ### Note
 
-In the example above, the strings `s` and `t` contain the same letters, but in a different order. An anagram is a word or phrase formed by rearranging the letters of a different word or phrase.
+In the example above, the pair `[1, 0]` is also a valid solution, but the order of the indices does not matter.
 
 ### Evaluation Criteria
 
