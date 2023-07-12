@@ -1,5 +1,3 @@
-An example of a CodeSignal 70-minute coding test that evaluates core CS concepts and measures code implementation, problem-solving, and speed:
-
 ## Problem Statement:
 
 You are given two strings `s` and `t`. Write a function `isAnagram` that returns `true` if `t` is an anagram of `s` and `false` otherwise.
