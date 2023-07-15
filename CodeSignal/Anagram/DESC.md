@@ -1,4 +1,4 @@
-# Problem
+# Problem: Anagram
 ## Problem Statement:
 
 You are given two strings `s` and `t`. Write a function `isAnagram` that returns `true` if `t` is an anagram of `s` and `false` otherwise.
