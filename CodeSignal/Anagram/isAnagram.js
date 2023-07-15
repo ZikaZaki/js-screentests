@@ -12,3 +12,4 @@ function isAnagram(s, t) {
 
     return sCount === tCount;
 }
+
