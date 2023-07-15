@@ -1,5 +1,3 @@
-An example of a CodeSignal 70-minute coding test that evaluates core CS concepts and measures code implementation, problem-solving, and speed:
-
 ## Problem Statement:
 
 You are given a list of integers `nums` and an integer `target`. Write a function `twoSum` that returns all pairs of indices `[i, j]` such that `nums[i] + nums[j] = target`. You may assume that each input would have exactly one solution, and you may not use the same element twice.
