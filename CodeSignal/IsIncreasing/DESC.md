@@ -1,5 +1,3 @@
-
-
 ## Problem statement: isIncreasing
 
 You are given an array of integers. Your task is to implement the `isIncreasing` function that determines whether the array is strictly increasing.
