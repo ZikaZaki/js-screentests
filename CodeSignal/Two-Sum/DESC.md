@@ -1,4 +1,4 @@
-## Problem Statement:
+## Problem Statement: Two-Sum
 
 You are given a list of integers `nums` and an integer `target`. Write a function `twoSum` that returns all pairs of indices `[i, j]` such that `nums[i] + nums[j] = target`. You may assume that each input would have exactly one solution, and you may not use the same element twice.
 
