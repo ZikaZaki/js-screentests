@@ -26,32 +26,19 @@ function isDigit(str) {
 
 // Alternative Calculator Function
 function altCalculator(expression) {
+  // get the expression tokens without empty space.
   const tokens = expression.split(" ");
-  let operand1, operand2, operator, result;
+  
   let i = 0;
-
-  while (i < tokens.length && tokens.length >= 3) {
-    // console.log("length: ", tokens.length);
-    // console.log("index : ", i);
-    if (isOperator(tokens[i]) && isDigit(tokens[i+1]) && isDigit(tokens[i+2])) {
-      operator = tokens[i];
-      operand1 = Number(tokens[i+1]);
-      operand2 = Number(tokens[i+2]);
-      result = calculate(operand1, operand2, operator);
-      tokens.splice(i, 3, result);
-      i = 0;
-      // console.log("length : ", tokens.length);
-      console.log("remaining tokens: ", tokens);
-    } else {i+=1;}
-  }
-
-  // Perform final calcuation if remaining.
   while (tokens.length > 1) {
-    operand1 = Number(tokens[0]);
-    operator = tokens[1];
-    operand2 = Number(tokens[2]);
-    result = calculate(operand1, operand2, operator);
-    tokens.splice(0, 3, result);
+      if (isOperator(tokens[i]) && isDigit(tokens[i+1]) && isDigit(tokens[i+2])) {
+        const op1 = tokens[i+1], op2 = tokens[i+2], opr = tokens[i];
+        const result = calculate(op1, op2, opr);
+        // console.log("result:", result);
+        tokens.splice(i, 3, result);
+        // console.log("tokens:",tokens);
+        i = 0;
+      } else { i++; }
   }
 
   return tokens.pop();
