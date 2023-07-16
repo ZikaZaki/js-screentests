@@ -1,4 +1,4 @@
-An example of a CodeSignal question that tests the ability to implement algorithms to solve problems:
+
 
 ## Problem statement: isIncreasing
 
